@@ -1,28 +1,49 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="assets/app.css">
-<title>Birth Year</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age App</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="center-top-50">
-        <form class="form">
-            <div class="center-top-20">
-                <input style="height:30px; width:400px; padding-left:10px;" placeholder="Type Your Age..." type="number" name="number" id="number" />
-                <input style="height:35px;" type="button" value="Find Year" id="button" />
-                <p  id="year">Year</p>
+    <div class="root">
+        <div>
+            <div class="age-input">
+                <h2>Age Calculator</h2>
+                <span title="Age"> Age: </span>
+                <input id="ageEntered" placeholder="age" type="number" required />
+                <button id="getYear" > Find year</button>
             </div>
-        </form>
+            <label class="disp"> Your Birth Year is: <ye id="age"> </ye></label>
+        </div>
+        <!-- *********************************************** -->
+        <div>
+            <div class="text-input">
+                <span title="Date of Birth"> Date of Birth: </span>
+                <input id="dobEntered" placeholder="Date of Birth" type="date" required />
+            </div>
+            <!-- *********************************************** -->
+            <div class="date-input">
+                <span title="Age at the Date of "> Age at the Date of </span>
+                <input id="getAgeInput" placeholder="Age at the Date of" type="date" required />
+            </div>
+            <button id="calculateAge"> Calculate </button>
+            <div class="ageContainer">
+            <p> You will be </p>
+            <span id="years">  </span>
+            <span id="months">  </span>
+            <span id="weeks"> </span>
+            <span id="days"> </span>
+            </div>
+        </div>
     </div>
-
-
-
-<script src="assets/app.js">
-</script>
-
-
-
+    <script src="js/moment.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
